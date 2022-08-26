@@ -6,8 +6,11 @@ import "./App.css";
 
 const App = () => {
   const [courseGoals, setCourseGoals] = useState([
-    { id: "2", text: "Finish the course!" },
-    { id: "1", text: "Do all exercises!" },
+    { id: "2", text: "Master this technology from zero to hero!" },
+    {
+      id: "1",
+      text: "Don't forget to debug any error thrown by your application!",
+    },
   ]);
 
   const addGoalHandler = (enteredText) => {
@@ -17,7 +20,6 @@ const App = () => {
         id: parseInt(updatedGoals[0].id) + 1,
         text: enteredText,
       });
-      console.log(updatedGoals);
       return updatedGoals;
     });
   };
